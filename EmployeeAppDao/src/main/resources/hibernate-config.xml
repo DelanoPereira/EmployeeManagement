@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- Comment below two lines for production use -->
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		<property name="testConnectionOnCheckOut">true</property>
+		<property name="preferedTestQuery">SELECT 1+1</property>
+		<property name="current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</property>
+
+
+		<mapping class="com.management.employee.dao.model.SocialMediaAddress" />
+		<mapping class="com.management.employee.dao.model.EmployeeContactDetails" />
+		<mapping class="com.management.employee.dao.model.Employee" />
+		<mapping class="com.management.employee.dao.model.EmployeeAddress" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
